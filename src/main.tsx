@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App title="React query checking " />
+      <App title="React query checking" />
     </QueryClientProvider>
   </React.StrictMode>
 );
