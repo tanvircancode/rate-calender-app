@@ -2,31 +2,6 @@ export interface AppProps {
   title: string;
 }
 
-export interface User {
-  id: string;
-  name: string;
-  occupancy: number;
-  // username: string;
-  // email: string;
-  // message: string;
-  // address: {
-  //   street: string;
-  //   suite: string;
-  //   city: string;
-  //   zipcode: string;
-  //   geo: {
-  //     lat: string;
-  //     lng: string;
-  //   };
-  // };
-  // phone: string;
-  // website: string;
-  // company: {
-  //   name: string;
-  //   catchPhrase: string;
-  //   bs: string;
-  // };
-}
 
 // Grit start
 
@@ -37,8 +12,8 @@ export interface DataTableProps {
 
 export interface RowData {
   id: string;
-  roomType: string;
-  [key: string]: string | number;
+  property: string;
+  [key: string]: string | number | undefined | null;
 }
 
 export interface IRateCalendar {
@@ -47,7 +22,7 @@ export interface IRateCalendar {
   rate: number;
   min_length_of_stay: number;
   reservation_deadline: number;
-}
+}  
 
 export interface IRatePlan {
   id: number;
@@ -78,17 +53,3 @@ export interface ApiResponse {
 }
 
 // // Grit end
-
-//chatGPT
-export interface Rate {
-  date: string;
-  status: string;
-  roomsToSell: number;
-  netBooked: number;
-  standardRate: number;
-}
-
-export interface Room {
-  roomType: string;
-  rates: Rate[];
-}
